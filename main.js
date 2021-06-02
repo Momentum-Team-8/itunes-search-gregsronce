@@ -8,25 +8,25 @@
 // Use insomnia to figure out url specifications. Try dot notating one item to the DOM. Use ideas from customer currency project to build boxes. 
 // Loop through every time we do a GET request to extrapolate the exact data we need to build boxes in the container. 
 
-const url = 'https://itunes.apple.com/search?term'
+// Use template literal in url?
 const form = document.getElementById('input-field')
+const artistSearch = document.getElementById('artist-search')
 const artistDisplay = document.querySelector('#song-info-container')
 // const submitSearch = document.getElementById('search-button')
 
 form.addEventListener('submit', event => {
     event.preventDefault()
-    const artistSearch = document.getElementById('artist-search').value
     getInfo()
-    location.reload()
 })
 
-function getInfo()
+function getInfo() {
+const url = `https://proxy-itunes-api.glitch.me/search?term=${artistSearch.value}&limit=15&media=music&entity=song`
 fetch(url)
-.then((res) => res.json)
-.then((data) => {
-    
+.then(res => res.json)
+.then(data => {
+  
 })
-
+}
 // Insert for of loop into GET fetch request looping through data?
 // for (let result of results)?
 // Only include 15 results
@@ -36,13 +36,13 @@ fetch(url)
     // artistBox.classList.add('artist-box')
     // artistDisplay.appendChild(artistBox)
 
-// Next comes the image associated with each song (artworkURl--3 different sizes in JSON)
+// Next comes the image associated with each song (artworkURl--3 different sizes in JSON--create another get request?)
     // const artistImage = document.createElement('img')
     // artistImage.src = x
     // artistBox.appendChild(artistImage)
 
 // Next comes the song title. Will have to add add event listener to the parent element with event delegation??
-// ("preveiwURL" in JSON--build in audio tag here and it will have to be appended to header below title?)
+// ("preveiwURL" in JSON--build in audio tag here and it will have to be appended to header below title?//create another get request?)
     // const songTitle = document.createElement('href to the audio file' with text of song name)
 
 // Next comes the Band/Artist Name ("artistName in JSON").
