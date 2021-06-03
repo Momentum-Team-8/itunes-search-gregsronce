@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="moment.min.js" defer></script> 
-  <script src="main.js" defer></script>
-  <title>Music Search</title>
-</head>
-<body>
-  <header class="title-and-audio" id="header">
-    <h1>Music Search, Dude</h1>
-  </header><hr><br><br>
-  <div class="form" id="input-container">
-    <form id="input-field">
-      <input class="artist-search" id="artist-search" type="text" placeholder="Search For Artist">
-      <button class="button-search" id="search-button" type="submit">Search</button><br><hr>
-    </form>
-  </div>
-  <div class="song-info-container"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="moment.min.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Music Search</title>
+  </head>
+
+  <body>
+    <header class="page-title" id="header">
+      <h1>Tunes Search</h1>
+    </header>
+    <hr />
+    <div class="form-field" id="input-container">
+      <form class="input-field" id="input-field">
+        <input
+          class="artist-search"
+          id="artist-search"
+          type="text"
+          placeholder="Search For Artist"
+          required
+        />
+        <button class="button-search" id="search-button" type="submit">
+          Search
+        </button>
+        <hr />
+      </form>
+    </div>
+    <div class="song-info-container"></div>
+  </body>
 </html>

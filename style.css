@@ -1,57 +1,76 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.title-and-audio {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+.page-title {
+  text-align: center;
 }
 
-figure {
-    padding: 20px;
+.page-title > h1 {
+  padding-bottom: 40px;
+  font-size: 40px;
 }
 
 .fig-caption {
-    font-size: 20px;
-    
-}    
+  font-size: 15px;
+  margin-bottom: 10px;
+}
 
-.form {
-    margin-left: 20px;
-    text-align: center;
+.remove-song-button {
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+}
+
+.form-field {
+  text-align: center;
+}
+
+.input-field {
+  margin-bottom: 30px;
 }
 
 .artist-search {
-    width: 200px;
-    height: 20px;
+  width: 500px;
+  height: 30px;
 }
 
 .button-search {
-    width: 50px;
+  width: 100px;
+  height: 30px;
 }
 
-.search-title {
-    padding: 20px;
+.search-results {
+  font-size: 20px;
+}
+
+.clear-search-button {
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
 }
 
 .song-info-container {
-    width: 1000px;
-    height: 600px;
-    margin-left: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  width: fit-content;
+  height: 600px;
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .artist-box {
-    width: 200px;
-    height: 200px;
-    text-align: center;
-    padding: 20px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
 }
 
-    /* Create container that is 600px by 1000px, each artist box will be 200px by 200px.*/
-/* Will have to flex wrap the artist boxes in the container class*/
+.artist-box > p {
+  font-size: 12px;
+}
+
+.artist-box > h4 {
+  font-size: 15px;
+}
