@@ -9,15 +9,24 @@
   <title>Music Search</title>
 </head>
 <body>
-  <header class="title" id="title">
+  <header class="title-and-audio" id="header">
     <h1>Music Search, Dude</h1>
+    <!-- <figure>
+    <figcaption></figcaption>
+    <audio
+        controls
+        src="/media/cc0-audio/t-rex-roar.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio> 
+</figure> -->
   </header>
-  <div id="input-container">
+  <div class="form" id="input-container">
     <form id="input-field">
       <input id="artist-search" type="text" placeholder="Search For Artist">
       <button id="search-button" type="submit">Search</button>
     </form>
   </div>
-  <div id="song-info-container"></div>
+  <div class="song-info-container"></div>
 </body>
 </html>
