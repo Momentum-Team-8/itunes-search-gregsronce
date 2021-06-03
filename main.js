@@ -86,13 +86,3 @@ function getInfo() {
       }
     });
 }
-
-// const newSearch = document.createElement("button");
-//             newSearch.classList.add("new-search-button");
-//             newSearch.innerText = "Clear Search";
-//             figure.appendChild(newSearch);
-//             newSearch.addEventListener("click", (event) => {
-//               if (event.target) {
-//                 location.reload();
-//               }
-//             });
