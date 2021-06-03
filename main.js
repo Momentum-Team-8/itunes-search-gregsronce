@@ -20,9 +20,7 @@ form.addEventListener('submit', event => {
     searchTitle.classList.add('search-title')
     searchTitle.innerText = "Search Results"
     form.appendChild(searchTitle)
-    form.appendChild()
-   getInfo()
-
+    getInfo()
 }) 
 
 
@@ -68,7 +66,7 @@ songTitle.addEventListener('click', event => {
     songPreview.setAttribute('type', 'audio/mpeg')
     songPreview.setAttribute('controls', 'controls')
     songPreview.src = result.previewUrl
-    figure.appendChild(songPreview) 
+    figure.appendChild(songPreview)
    }
 })    
  }
