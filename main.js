@@ -13,16 +13,16 @@ const form = document.getElementById('input-field')
 const head = document.getElementById('header')
 const artistSearch = document.getElementById('artist-search')
 const artistDisplay = document.querySelector('.song-info-container')
-// const submitSearch = document.getElementById('search-button')
-
 
 form.addEventListener('submit', event => {
     event.preventDefault()
-    // const searchTitle = document.createElement('h1')
-    // searchTitle.classList.add('search-title')
-    // searchTitle.innerText = "Search Results"
-    // artistDisplay.appendChild(searchTitle)
+    const searchTitle = document.createElement('h1')
+    searchTitle.classList.add('search-title')
+    searchTitle.innerText = "Search Results"
+    form.appendChild(searchTitle)
+    form.appendChild()
    getInfo()
+
 }) 
 
 
@@ -37,23 +37,46 @@ for (let result of data.results) {
     const artistBox = document.createElement('div')
     artistBox.classList.add('artist-box')
     artistDisplay.appendChild(artistBox)
+    
     const artistImage = document.createElement('img')
     artistImage.src = result.artworkUrl100
     artistBox.appendChild(artistImage) 
-    const songTitle = document.createElement('p')
+    
+    const song = document.createElement('p')
+    song.classList.add('song-title')
+    const songTitle = document.createElement('a')
+    songTitle.classList.add('link')
+    songTitle.href = '#'
     songTitle.innerText = result.trackName
-    artistBox.appendChild(songTitle)
-    const artistName = document.createElement('p')
+    song.appendChild(songTitle)
+    artistBox.appendChild(song)
+    
+    const artistName = document.createElement('h2')
     artistName.innerText = result.artistName
     artistBox.appendChild(artistName)
-    // const songPreview = document.createElement('audio')
-    // songPreview.setAttribute('type', 'audio/mpeg')
-    // songPreview.setAttribute('controls', 'controls')
-    // songPreview.src = result.previewUrl
-    // artistBox.appendChild(songPreview) 
+    
+
+songTitle.addEventListener('click', event => {
+    if (event.target.classList.contains('link')) {
+    const figure = document.createElement('figure')
+    head.appendChild(figure)
+    const figCaption = document.createElement('figcaption')
+    figCaption.classList.add ('fig-caption')
+    figCaption.innerText = "Now playing: " + result.trackName 
+    figure.appendChild(figCaption)
+    const songPreview = document.createElement('audio')
+    songPreview.setAttribute('type', 'audio/mpeg')
+    songPreview.setAttribute('controls', 'controls')
+    songPreview.src = result.previewUrl
+    figure.appendChild(songPreview) 
+   }
+})    
  }
 })
 }
+
+
+
 
 // Insert for of loop into GET fetch request looping through data?
 // for (let result of results)?

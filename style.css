@@ -6,16 +6,35 @@
 
 .title-and-audio {
     padding: 20px;
+    font-size: 30px;
     text-align: center;
 }
 
-.title-and-audio > figure {
+figure {
     padding: 20px;
 }
 
+.fig-caption {
+    font-size: 20px;
+    
+}    
+
 .form {
     margin-left: 20px;
+    text-align: center;
+}
 
+.artist-search {
+    width: 200px;
+    height: 20px;
+}
+
+.button-search {
+    width: 50px;
+}
+
+.search-title {
+    padding: 20px;
 }
 
 .song-info-container {
@@ -27,18 +46,11 @@
     margin-top: 20px;
 }
 
-.search-title {
-    padding: 20px;
-}
-
-.display-title {
-    padding: 20px;
-}
-
 .artist-box {
     width: 200px;
     height: 200px;
     text-align: center;
+    padding: 20px;
 }
 
     /* Create container that is 600px by 1000px, each artist box will be 200px by 200px.*/
