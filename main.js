@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
     form.appendChild(searchTitle);
     const newSearch = document.createElement("button");
     newSearch.classList.add("clear-search-button");
-    newSearch.innerText = "Clear Search";
+    newSearch.innerText = "New Search";
     form.appendChild(newSearch);
     newSearch.addEventListener("click", (event) => {
       if (event.target) {
