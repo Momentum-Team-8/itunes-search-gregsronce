@@ -29,6 +29,7 @@ form.addEventListener("submit", (event) => {
 });
 
 function getInfo() {
+  json = {};
   const url = `https://proxy-itunes-api.glitch.me/search?term=${artistSearch.value}&limit=18&media=music&entity=song`;
   fetch(url)
     .then((res) => res.json())
@@ -58,7 +59,6 @@ function getInfo() {
 
         songTitle.addEventListener("click", (event) => {
           if (event.target.classList.contains("link")) {
-
             const figure = document.createElement("figure");
             figure.classList.add("figure");
             head.appendChild(figure);
