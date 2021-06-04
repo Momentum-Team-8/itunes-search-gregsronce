@@ -24,13 +24,11 @@ form.addEventListener("submit", (event) => {
 
     searchTitle.classList.add("search-results");
     searchTitle.innerText = "Search Results:";
-    head.appendChild(searchTitle);
     getInfo();
   }
 });
 
 function getInfo() {
-  json = {};
   const url = `https://proxy-itunes-api.glitch.me/search?term=${artistSearch.value}&limit=18&media=music&entity=song`;
   fetch(url)
     .then((res) => res.json())
@@ -60,7 +58,6 @@ function getInfo() {
 
         songTitle.addEventListener("click", (event) => {
           if (event.target.classList.contains("link")) {
-            searchTitle.remove();
 
             const figure = document.createElement("figure");
             figure.classList.add("figure");
@@ -89,11 +86,6 @@ function getInfo() {
             });
             const line = document.createElement("hr");
             figure.appendChild(line);
-
-            const searchResults = document.createElement("p");
-            searchResults.classList.add("search-results");
-            searchResults.innerText = "Search Results:";
-            figure.appendChild(searchResults);
           }
         });
       }
