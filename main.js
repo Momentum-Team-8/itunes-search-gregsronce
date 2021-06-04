@@ -4,6 +4,7 @@ const artistSearch = document.getElementById("artist-search");
 const artistDisplay = document.querySelector(".song-info-container");
 
 form.addEventListener("submit", (event) => {
+  // prevent the form being submitted when the page reloads
   event.preventDefault();
   form.remove();
 
@@ -14,7 +15,7 @@ form.addEventListener("submit", (event) => {
   newSearch.addEventListener("click", (event) => {
     location.reload();
   });
-  
+
   const line = document.createElement("hr");
   head.appendChild(line);
 
@@ -26,7 +27,7 @@ function getInfo() {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // for of loop where each member of data.results is assigned to result in order.
       for (let result of data.results) {
         const artistBox = document.createElement("div");
         artistBox.classList.add("artist-box");
