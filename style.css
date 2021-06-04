@@ -14,16 +14,10 @@
   font-size: 40px;
 }
 
-.search-results {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
 .clear-search-button {
   width: 200px;
   height: 30px;
   background-color: rgb(13, 233, 137);
-  /* color: #ffffff; */
 }
 
 .fig-caption {
