@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
 });
 
 function getInfo() {
-  const url = `https://proxy-itunes-api.glitch.me/search?term=${artistSearch.value}&limit=18&media=music&entity=song`;
+  const url = `https://proxy-itunes-api.glitch.me/search?term=${artistSearch.value}&limit=14&media=music&entity=song`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
